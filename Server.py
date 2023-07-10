@@ -5,7 +5,7 @@ import sys
 
 HOST = "127.0.0.7"
 PORT = 8080
-CODE = "uft-8"
+CODE = "Utf8"
 
 # Create a connection socket
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -40,7 +40,7 @@ while 1:
         msgSrv = "I received your message, OK Continue"
         client.send(msgSrv.encode(CODE))
     # Close the connection
-    client.send("The Connection is Finishes")
+    client.send("The Connection is Finishes".encode(CODE))
     client.close()
     print(f"Connection Finishes With {address}")
 
