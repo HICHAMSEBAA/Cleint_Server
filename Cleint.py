@@ -11,7 +11,7 @@ CODE = "Utf8"
 # Create a connection socket
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-
+# Trying a request to a server, if no error
 try:
     client.connect((HOST, PORT))
 except socket.error:
@@ -22,7 +22,7 @@ except socket.error:
 msgServer = client.recv(1024).decode(CODE)
 print(msgServer)
 
-
+# Dialog with server
 while 1:
 
     msgClient = str(input("Enter your Massage : "))
@@ -37,26 +37,5 @@ while 1:
     msgServer = client.recv(1024).decode(CODE)
     print(f"From Server : {msgServer}")
 
+# Communication ends
 client.close()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
