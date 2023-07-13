@@ -26,7 +26,7 @@ while 1:
     client, address = server.accept()
     print(f"Client on {address[0]}  and Port {address[1]}")
 
-    # 5. The Dialog with the client
+    # The Dialog with the client
     msgSrv = "You are connected to Hicham Server."
     client.send(msgSrv.encode(CODE))
 
